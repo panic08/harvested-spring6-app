@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All humans</title>
+</head>
+<body>
+
+<form action="/logout" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+<div th:each="person: ${people}">
+<a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">usewqsr</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/people/new">Create a new person</a>
+
+</body>
+</html>
